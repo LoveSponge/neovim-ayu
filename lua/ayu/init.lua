@@ -112,10 +112,17 @@ local function set_groups()
     markdownCode = { fg = colors.special },
 
     -- TreeSitter
-    TSProperty = { fg = colors.tag },
-    TSField = { fg = colors.tag },
-    TSParameter = { fg = colors.fg },
+    TSVariable = { fg = colors.fg },
+    TSProperty = { fg = colors.fg },
+    TSParameter = { fg = colors.entity },
     TSUnderline = { sp = colors.tag, underline = true },
+    TSConstructor = { fg = colors.fg },
+    TSTag = { fg = colors.tag },
+    TSTagDelimiter = { fg = colors.regexp },
+    TSTagAttribute = { fg = colors.func },
+    TSConstant = { fg = colors.fg },
+    TSInclude = { fg = colors.keyword },
+    TSConstBuiltin = { fg = colors.constant },
 
     -- Gitsigns
     GitSignsAddLn = { fg = colors.vcs_added },
