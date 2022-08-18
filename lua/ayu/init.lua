@@ -26,12 +26,12 @@ end
 local function set_groups()
   local groups = {
     -- Base
-    Normal = { fg = colors.fg, bg = colors.bg },
+    Normal = { fg = colors.accent, bg = colors.bg },
     NormalFloat = { bg = colors.bg },
     FloatBorder = { fg = colors.comment },
     FloatTitle = { fg = colors.fg },
     ColorColumn = { bg = colors.line },
-    Cursor = { fg = colors.bg, bg = colors.fg },
+    Cursor = { bg = colors.accent },
     CursorColumn = { bg = colors.line },
     CursorLine = { bg = colors.line },
     CursorLineNr = { fg = colors.accent, bg = colors.line },
@@ -44,7 +44,7 @@ local function set_groups()
     FoldColumn = { bg = colors.bg },
     SignColumn = { bg = colors.bg },
 
-    MatchParen = { sp = colors.func, underline = true },
+    MatchParen = { bg = colors.selection_bg },
     ModeMsg = { fg = colors.string },
     MoreMsg = { fg = colors.string },
     NonText = { fg = colors.guide_normal },
@@ -108,6 +108,8 @@ local function set_groups()
     DiagnosticUnderlineInfo = { sp = colors.tag, undercurl = true },
     DiagnosticUnderlineHint = { sp = colors.regexp, undercurl = true },
 
+    LSPReferenceRead = { bg = colors.selection_inactive },
+
     -- Markdown
     markdownCode = { fg = colors.special },
 
@@ -116,7 +118,7 @@ local function set_groups()
     TSProperty = { fg = colors.fg },
     TSParameter = { fg = colors.entity },
     TSUnderline = { sp = colors.tag, underline = true },
-    TSConstructor = { fg = colors.fg },
+    TSConstructor = { fg = colors.special },
     TSTag = { fg = colors.tag },
     TSTagDelimiter = { fg = colors.regexp },
     TSTagAttribute = { fg = colors.func },
